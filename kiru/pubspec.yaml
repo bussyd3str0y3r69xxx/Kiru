@@ -63,6 +63,9 @@ flutter:
       - images/icons/google.png
       - images/icons/facebook.png
       - images/icons/vk.png
+      - images/icons/extra_menu.png
+      - images/icons/settings.png
+      - images/profile_pic.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
