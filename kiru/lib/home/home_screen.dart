@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget{
     return Scaffold(
       backgroundColor: AppColors.home_screen,
       appBar: AppBar(
-         scrolledUnderElevation: 0,
+        scrolledUnderElevation: 0,
         backgroundColor: AppColors.home_screen,
         leading:
          IconButton(onPressed: () {},

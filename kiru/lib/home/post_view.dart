@@ -63,10 +63,12 @@ Widget postGrid(String imageName){
               
             ),
              child: RichText(text: TextSpan(
+              
               children: [
-                WidgetSpan(child: Image.asset(AppImages.create,height: 21,width: 21,)),
+                WidgetSpan(child: Image.asset(AppImages.create,height: 21,width: 21,), alignment: PlaceholderAlignment.middle,),
+                
                 WidgetSpan(child: Padding(padding: EdgeInsets.symmetric(horizontal: 2))),
-                TextSpan(text: 'Обупликовать',style: TextStyle(
+                TextSpan(text: 'Опубликовать',style: TextStyle(
                   color: AppColors.black,
                   fontSize: 16,
                   fontWeight: FontWeight.w600
