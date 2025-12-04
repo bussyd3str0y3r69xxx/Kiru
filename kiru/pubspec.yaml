@@ -74,6 +74,18 @@ flutter:
       - images/post_images/post2.jpg
       - images/post_images/post3.jpg
       - images/post_images/post4.jpg
+      - images/icons/search.png
+      - images/fav_images/fav1.jpg
+      - images/fav_images/fav2.jpg
+      - images/fav_images/fav3.jpg
+      - images/fav_images/fav4.jpg
+      - images/fav_images/fav5.jpg
+      - images/fav_images/fav6.jpg
+      - images/fyp_images/fyp1.jpg
+      - images/fyp_images/fyp2.jpg
+      - images/fyp_images/fyp3.jpg
+      - images/fyp_images/fyp4.jpg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

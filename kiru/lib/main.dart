@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kiru/favourite/favourite_screen.dart';
+import 'package:kiru/fyp/for_you_screen.dart';
 import 'package:kiru/home/home_screen.dart';
 import 'package:kiru/login_screen.dart';
 
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override 
   Widget build(BuildContext context){
     return MaterialApp(
-        home: HomeScreen()
+        home: ForYouScreen()
         
     );
   }

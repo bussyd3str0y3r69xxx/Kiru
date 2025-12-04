@@ -10,33 +10,36 @@ class HomeScreen extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.home_screen,
-      appBar: AppBar(
-        scrolledUnderElevation: 0,
+    return SafeArea(
+      top: false,
+      child: Scaffold(
         backgroundColor: AppColors.home_screen,
-        leading:
-         IconButton(onPressed: () {},
-          icon: Image.asset(AppImages.settings,width: 24,height: 24,)
-          ),
-        actions: [
+        appBar: AppBar(
+          scrolledUnderElevation: 0,
+          backgroundColor: AppColors.home_screen,
+          leading:
            IconButton(onPressed: () {},
-          icon: Image.asset(AppImages.extra,width: 24,height: 24,)
-          ),
-        ],
-      ),
-      body:
-      
-      SingleChildScrollView(
-        child: Column(
-          children: [
-            SizedBox(height: 40,),
-            ProfileBox(),
-            SizedBox(height: 16,),
-            PostView()
+            icon: Image.asset(AppImages.settings,width: 24,height: 24,)
+            ),
+          actions: [
+             IconButton(onPressed: () {},
+            icon: Image.asset(AppImages.extra,width: 24,height: 24,)
+            ),
           ],
         ),
-      )
+        body:
+        
+        SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(height: 40,),
+              ProfileBox(),
+              SizedBox(height: 16,),
+              PostView()
+            ],
+          ),
+        )
+      ),
     );
   
   }
