@@ -7,4 +7,7 @@ class AppImages {
   static const String extra = 'images/icons/extra_menu.png';
   static const String settings = 'images/icons/settings.png';
   static const String profilePic = 'images/profilePic.png';
+  static const String check = 'images/verif.png';
+  static const String telegram = 'images/icons/tgIcon.png';
+  static const String instagram = 'images/icons/igIcon.png';
 }

@@ -19,6 +19,7 @@ class ProfileBox extends StatelessWidget{
             decoration: BoxDecoration(
               color: AppColors.textcolor,
               borderRadius: BorderRadius.circular(14),
+              
             ),
           ),
           Positioned(

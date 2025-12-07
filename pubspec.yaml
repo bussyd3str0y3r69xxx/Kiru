@@ -66,6 +66,9 @@ flutter:
       - images/icons/extra_menu.png
       - images/icons/settings.png
       - images/profilePic.png
+      - images/verif.png
+      - images/icons/tgIcon.png 
+      - images/icons/igIcon.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

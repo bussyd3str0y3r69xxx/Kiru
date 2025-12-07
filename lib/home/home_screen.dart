@@ -18,7 +18,8 @@ class HomeScreen extends StatelessWidget{
           ),
         actions: [
            IconButton(onPressed: () {},
-          icon: Image.asset(AppImages.extra,width: 24,height: 24,)
+          icon: Image.asset(AppImages.extra,width: 24, height: 24
+          ,)
           ),
         ],
       ),
