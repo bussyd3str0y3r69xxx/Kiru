@@ -5,6 +5,8 @@ import 'package:kiru/favourite/favourite_screen.dart';
 import 'package:kiru/fyp/for_you_screen.dart';
 import 'package:kiru/home/home_screen.dart';
 import 'package:kiru/login_screen.dart';
+import 'package:kiru/looks/looks_page.dart';
+import 'package:kiru/widgets/svg_icons.dart';
 
 
 final router = GoRouter(
@@ -35,20 +37,21 @@ final router = GoRouter(
                     onPressed: () {
                       context.go('/home');
                     },
-                    icon: Icon(Icons.home),
+                    icon: SvgIcon.home(),
                   ),
                   IconButton(
                     onPressed: () {
                       context.go('/favorites');
                     },
-                    icon: Icon(Icons.favorite),
+                    icon: SvgIcon.favorites(),
                   ),
                   IconButton(
                     onPressed: () {
                       context.go('/recommendations');
                     },
-                    icon: Icon(Icons.foundation),
+                    icon: SvgIcon.recommendations(),
                   ),
+                  IconButton(onPressed: () {context.go('/looks');}, icon: SvgIcon.looks())
                 ],
               ),
             ),
@@ -66,6 +69,7 @@ final router = GoRouter(
           path: '/recommendations',
           builder: (context, state) => const ForYouScreen(),
         ),
+        GoRoute(path: '/looks', builder: (context, state) => const LooksPage(),)
       ],
     ),
   ],

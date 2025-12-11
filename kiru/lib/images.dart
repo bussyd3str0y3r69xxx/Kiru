@@ -29,4 +29,11 @@ class AppImages {
   static const String fypTwo = 'images/fyp_images/fyp2.jpg';
   static const String fypThree = 'images/fyp_images/fyp3.jpg';
   static const String fypFour = 'images/fyp_images/fyp4.jpg';
+
+  static const String shoeOne = 'images/looks_images/shoe_one.png';
+  static const String shoeTwo = 'images/looks_images/shoe_two.png';
+  static const String shirt = 'images/looks_images/shirt.png';
+  static const String hat = 'images/looks_images/hat.png';
+  static const String coat = 'images/looks_images/coat.png';
+  static const String pants = 'images/looks_images/pants.png';
 }

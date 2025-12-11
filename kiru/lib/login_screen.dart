@@ -3,6 +3,7 @@ import 'package:kiru/colors.dart';
 import 'package:kiru/images.dart';
 import 'package:kiru/login/buttons_panel.dart';
 import 'package:kiru/login/icons_panel.dart';
+import 'package:kiru/widgets/svg_icons.dart';
 
 
 class LoginScreen extends StatelessWidget {
@@ -24,7 +25,7 @@ class LoginScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             spacing: 12,
             children: [
-              Image.asset(AppImages.appLogo,width: 68, height: 81,),
+              SvgIcon.logo(),
               Padding(
                 padding: const EdgeInsets.only(bottom: 8),
                 child: Text('Kiru',style: TextStyle(
