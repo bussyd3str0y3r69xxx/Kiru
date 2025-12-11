@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:kiru/colors.dart';
 import 'package:kiru/favourite/favourite_view.dart';
 import 'package:kiru/home/post_view.dart';
@@ -31,6 +32,7 @@ class FavouriteScreen extends StatelessWidget{
             ],
           ),
         ),
+       
     ));
     
   }

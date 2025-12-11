@@ -39,7 +39,7 @@ class ProfileBox extends StatelessWidget{
         children: [
           Container(
             padding: EdgeInsets.only(top: 60),
-            width: 345,
+            width: 354,
             height: 245,
             decoration: BoxDecoration(
               color: AppColors.textcolor,
@@ -72,7 +72,7 @@ class ProfileBox extends StatelessWidget{
                 SizedBox(height: 10,),
                 Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                spacing: 13,
+                spacing: 10,
                 children: [
                   SizedBox(
                     height: 40,
@@ -89,7 +89,7 @@ class ProfileBox extends StatelessWidget{
                   HomeIconsWithBackground(icon: AppImages.telegram),
                   HomeIconsWithBackground(icon: AppImages.instagram)
                 ],),
-                SizedBox(height: 10,),
+                SizedBox(height: 5,),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Text('Сотворю твой успех с помощью 100+ огненных образов. Моими капсулами пользуются более 2500 девушек — присоединяйся и ты!',

@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:kiru/colors.dart';
 
 class ButtonsPanel extends StatelessWidget{
@@ -29,7 +30,7 @@ class ButtonsPanel extends StatelessWidget{
 
             ),
 
-            TextButton(onPressed: () {}, 
+            TextButton(onPressed: () {context.push('/home');}, 
             child: Text(
              'Войти',
              style:TextStyle(

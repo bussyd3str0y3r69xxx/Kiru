@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:kiru/colors.dart';
 import 'package:kiru/home/post_view.dart';
 import 'package:kiru/home/profile_box.dart';
@@ -25,6 +26,7 @@ class HomeScreen extends StatelessWidget{
              IconButton(onPressed: () {},
             icon: Image.asset(AppImages.extra,width: 24,height: 24,)
             ),
+            IconButton(onPressed: () {context.go('/');}, icon: Icon(Icons.logout))
           ],
         ),
         body:
@@ -38,7 +40,8 @@ class HomeScreen extends StatelessWidget{
               PostView()
             ],
           ),
-        )
+        ),
+      
       ),
     );
   

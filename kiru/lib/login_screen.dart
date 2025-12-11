@@ -21,12 +21,12 @@ class LoginScreen extends StatelessWidget {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.end,
             spacing: 12,
             children: [
               Image.asset(AppImages.appLogo,width: 68, height: 81,),
               Padding(
-                padding: const EdgeInsets.only(bottom: 8,left: 12),
+                padding: const EdgeInsets.only(bottom: 8),
                 child: Text('Kiru',style: TextStyle(
                   color: AppColors.black,
                   fontSize: 36,
