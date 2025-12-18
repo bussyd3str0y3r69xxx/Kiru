@@ -6,12 +6,14 @@ import 'package:kiru/fyp/for_you_screen.dart';
 import 'package:kiru/home/home_screen.dart';
 import 'package:kiru/login_screen.dart';
 import 'package:kiru/looks/looks_page.dart';
+import 'package:kiru/register/register.dart';
 import 'package:kiru/widgets/svg_icons.dart';
 
 
 final router = GoRouter(
   routes: [
     GoRoute(path: '/', builder: (context, state) => LoginScreen()),
+    GoRoute(path: '/register', builder: (context, state) => RegisterScreen()),
     ShellRoute(
       builder: (context, state, child) {
         print('state ${state.pageKey} ${state.fullPath} ${state.name}');
@@ -64,7 +66,6 @@ final router = GoRouter(
           path: '/favorites',
           builder: (context, state) => const FavouriteScreen(),
         ),
-        
         GoRoute(
           path: '/recommendations',
           builder: (context, state) => const ForYouScreen(),

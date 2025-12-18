@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kiru/colors.dart';
 import 'package:kiru/images.dart';
+import 'package:kiru/looks/looks_page_view.dart';
 
 enum DropList {createItem, recognizeItem, createLook}
 
@@ -77,6 +78,13 @@ class LooksPage extends StatelessWidget{
               ),),
             ])
         ],
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            LooksPageView()
+          ],
+        ),
       ),
     );
   }
