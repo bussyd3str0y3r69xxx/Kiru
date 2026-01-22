@@ -6,7 +6,7 @@ import 'package:kiru/fyp/for_you_screen.dart';
 import 'package:kiru/home/home_screen.dart';
 import 'package:kiru/login_screen.dart';
 import 'package:kiru/looks/looks_page.dart';
-import 'package:kiru/register/register.dart';
+import 'package:kiru/register/ui/register.dart';
 import 'package:kiru/widgets/svg_icons.dart';
 
 
