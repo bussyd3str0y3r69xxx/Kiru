@@ -4,13 +4,18 @@ import 'package:kiru/colors.dart';
 class AppButton extends StatelessWidget {
   final VoidCallback onTap;
   final Color backgroundColor;
+  final bool isLoading;
 
-  const AppButton({super.key, required this.onTap,this.backgroundColor = AppColors.black});
+  const AppButton({
+    super.key,
+    required this.onTap,
+    this.backgroundColor = AppColors.black,
+    this.isLoading = false,
+  });
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-     return SizedBox(
+    return SizedBox(
       width: double.infinity,
       height: 58,
       child: ElevatedButton(
@@ -20,8 +25,16 @@ class AppButton extends StatelessWidget {
           shape: WidgetStatePropertyAll(
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
           ),
-        ), child: Text('Регистрация',style: TextStyle(color: AppColors.white),),
-      )
-     );
+        ),
+        child: Row(
+          spacing: 12,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            if (isLoading) CircularProgressIndicator(),
+            Text('Регистрация', style: TextStyle(color: AppColors.white)),
+          ],
+        ),
+      ),
+    );
   }
 }
