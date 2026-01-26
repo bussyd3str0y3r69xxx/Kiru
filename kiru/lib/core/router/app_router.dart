@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:kiru/colors.dart';
+import 'package:kiru/core/splash_screen/splash.dart';
 import 'package:kiru/favourite/favourite_screen.dart';
 import 'package:kiru/fyp/for_you_screen.dart';
 import 'package:kiru/home/home_screen.dart';
@@ -12,7 +13,8 @@ import 'package:kiru/widgets/svg_icons.dart';
 
 final router = GoRouter(
   routes: [
-    GoRoute(path: '/', builder: (context, state) => LoginScreen()),
+    GoRoute(path: '/', builder: (context, state) => SplashScreen()),
+    GoRoute(path: '/login', builder: (context, state) => LoginScreen()),
     GoRoute(path: '/register', builder: (context, state) => RegisterScreen()),
     ShellRoute(
       builder: (context, state, child) {
