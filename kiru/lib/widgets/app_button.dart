@@ -5,17 +5,21 @@ class AppButton extends StatelessWidget {
   final VoidCallback onTap;
   final Color backgroundColor;
   final bool isLoading;
+  final String? text;
+  final bool isDisabled;
 
   const AppButton({
     super.key,
     required this.onTap,
     this.backgroundColor = AppColors.black,
     this.isLoading = false,
+    this.isDisabled = false,
+    this.text
   });
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+ return SizedBox(
       width: double.infinity,
       height: 58,
       child: ElevatedButton(
@@ -30,8 +34,16 @@ class AppButton extends StatelessWidget {
           spacing: 12,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            if (isLoading) CircularProgressIndicator(),
-            Text('Регистрация', style: TextStyle(color: AppColors.white)),
+            if(isLoading)
+            CircularProgressIndicator(),
+            Text(
+              text ?? '',
+              style: TextStyle(
+                color: AppColors.buttonPrimaryText,
+                fontSize: 20,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
           ],
         ),
       ),

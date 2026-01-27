@@ -4,45 +4,61 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kiru/core/data/auth_repository.dart';
 
 
-abstract class AuthState {
-  
-} 
+abstract class AuthState {}
 
 class AuthInitialState extends AuthState {}
 
-class  AuthUnauthenticatedState extends AuthState {
-  
+class AuthUnauthenticatedState extends AuthState {}
+
+class AuthAuthenticatedState extends AuthState {}
+
+class AuthErrorState extends AuthState {}
+
+abstract class AuthEvent {}
+
+class AuthMeEvent extends AuthEvent {}
+
+class AuthLoginEvent extends AuthEvent {
+  final String email;
+  final String password;
+  AuthLoginEvent(this.email, this.password);
 }
 
-class  AuthAuthenticatedState extends AuthState {
-  
-}
-
-class AuthError extends AuthState{
-  
-}
-
-abstract class AuthEvent{
-
-}
-
-class AuthMeEvent extends AuthEvent{}
-
-class AuthBloc extends Bloc<AuthEvent, AuthState>{
+class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final AuthRepository authRepository;
-  AuthBloc(this.authRepository) : super(AuthInitialState()){
+
+  AuthBloc(this.authRepository) : super(AuthInitialState()) {
     on<AuthMeEvent>(_onAuthMeEvent);
+    on<AuthLoginEvent>(_onLoginEvent);
   }
 
-  FutureOr<void> _onAuthMeEvent(AuthMeEvent event, Emitter<AuthState> emit)async {
-    print('auth me event');
-    final response = await authRepository.authMe();
-    if (response == false){
-      emit (AuthUnauthenticatedState());
+  FutureOr<void> _onAuthMeEvent(
+    AuthMeEvent event,
+    Emitter<AuthState> emit,
+  ) async {
+    try {
+      if (state is! AuthInitialState) {
+        emit(AuthInitialState());
+      }
+      final response = await authRepository.authMe();
+      emit(response ? AuthAuthenticatedState() : AuthUnauthenticatedState());
+    } catch (e) {
+      emit(AuthErrorState());
     }
-    else if (response == true){
-      emit(AuthAuthenticatedState());
+  }
+
+  FutureOr<void> _onLoginEvent(
+    AuthLoginEvent event,
+    Emitter<AuthState> emit,
+  ) async {
+    try {
+      if (state is! AuthInitialState) {
+        emit(AuthInitialState());
+      }
+      final response = await authRepository.login(event.email, event.password);
+      emit(response ? AuthAuthenticatedState() : AuthUnauthenticatedState());
+    } catch (e) {
+      emit(AuthErrorState());
     }
-    print('response $response');
   }
 }
